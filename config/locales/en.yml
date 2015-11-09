@@ -46,6 +46,9 @@ en:
   percent_correct_answer: "(with %{number}% correct)"
   learn_progress: "Complete percent:"
   category_has_no_word: "There isn't any word in this category"
+  time:
+    minutes: "Minutes"
+    seconds: "Seconds"
   layouts:
     header:
       website: "Framgia eLearning"

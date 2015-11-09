@@ -19,6 +19,10 @@ class Lesson < ActiveRecord::Base
     [correct, total].join("/")
   end
 
+  def time_remaining
+    Settings.lesson.time_in_minutes * 60 - (Time.zone.now - self.created_at).to_i
+  end
+
   private
   def init_words
     self.words = self.category.words.not_learn(self.user.id)

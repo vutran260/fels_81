@@ -431,3 +431,34 @@ input.radio_word, .checkbox_answer {
 span.alert_true_answer {
   display: none;
 }
+
+#clockdiv{
+  font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+  position: fixed;
+  top: 2em;
+  right: 1em;
+  & > div{
+    width: 100px;
+    padding: 10px;
+    border-radius: 3px;
+    background: #00BF96;
+    display: inline-block;
+
+    & > span{
+      padding: 15px;
+      border-radius: 3px;
+      background: #00816A;
+      display: inline-block;
+    }
+  }
+}
+
+.smalltext{
+  padding-top: 5px;
+  font-size: 16px;
+}

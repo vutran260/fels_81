@@ -25,6 +25,7 @@ class LessonsController < ApplicationController
 
   def show
     @lesson = Lesson.find_by id: params[:id]
+    @time_remain = @lesson.time_remaining
   end
 
   private
