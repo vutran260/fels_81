@@ -1,3 +1,14 @@
+<div id="clockdiv">
+  <span id="time-remain" data-time-remain="<%= @time_remain %>"></span>
+  <div>
+    <span id="minutes"></span>
+    <div class="smalltext"><%= t "time.minutes" %></div>
+  </div>
+  <div>
+    <span id="seconds"></span>
+    <div class="smalltext"><%= t "time.seconds" %></div>
+  </div>
+</div>
 <p>
   <%= form_for @lesson do |f| %>
     <ol>
