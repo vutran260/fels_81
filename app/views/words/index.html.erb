@@ -10,10 +10,12 @@
           include_blank: t("word.all"), class: "col-md-3" %>
         <% Settings.option.each do |word_option| %>
           <div class="col-md-2">
-            <%= radio_button_tag :option, word_option,
-              (checked = true if params[:option] == word_option),
-              class: "radio_word" %>
-            <%= t "word.option.#{word_option}" %>
+            <label class="radio-inline">
+              <%= radio_button_tag :option, word_option,
+                (checked = true if params[:option] == word_option),
+                class: "radio_word" %>
+              <%= t "word.option.#{word_option}" %>
+            </label>
           </div>
         <% end %>
         <%= f.submit t("filter"),

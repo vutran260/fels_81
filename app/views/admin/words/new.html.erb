@@ -12,6 +12,14 @@
         params[:category_id]), class: "form-control" %>
       <%= f.label :content %>
       <%= f.text_field :content, class: "form-control" %>
+      <%= f.label :level %>
+      <br>
+      <% Settings.word.level.each do |level| %>
+        <label class="radio-inline">
+          <%= f.radio_button :level, level, class: "radio_word" %>
+          <%= t "word.level._#{level.to_s}" %>
+        </label>
+      <% end %>
       <div id="answers">
         <%= f.fields_for :answers do |answer| %>
           <div class="single_answer">
@@ -25,7 +33,7 @@
           "#answers" %>
         <%= new_fields_template f, :answers %>
       </div>
-
+      <br/>
       <%= f.submit t("admin.word.btn_add"), class: "btn btn-primary",
         id: "btn_word" %>
     <% end %>
