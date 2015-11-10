@@ -3,6 +3,6 @@
   <%= link_to user.name.upcase, user %>
   <% if logged_in? && current_user.admin? && !current_user?(user) %>
     | <%= link_to t(".delete"), admin_user_path(user), method: :delete,
-        data: {confirm: t(".confirm")} %>
+        data: {confirm: t(".confirm")}, class: "btn btn-danger btn-xs" %>
   <% end %>
 </li>

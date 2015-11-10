@@ -1,5 +1,6 @@
 <div class="col-md-3">
   <%= word.content %>
   <%= link_to t("admin.word.delete.display"), admin_word_path(word),
-    method: :delete, data: {confirm: t("admin.word.delete.confirm")} %>
+    method: :delete, data: {confirm: t("admin.word.delete.confirm")},
+    class: "text-danger" %>
 </div>

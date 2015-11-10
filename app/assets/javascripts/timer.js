@@ -5,7 +5,7 @@ $(function(){
 
 function time_remain(total_in_seconds){
   if (total_in_seconds < 0){
-    $("[type=\"submit\"]").remove();
+    $("[type='submit']").remove();
     set_time(0,0);
   } else if (total_in_seconds == 0){
     $("form").submit();
