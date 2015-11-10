@@ -7,6 +7,7 @@ class Word < ActiveRecord::Base
   has_many :user_word
 
   validates :content, presence: true
+  validates :level, presence: true
 
   accepts_nested_attributes_for :answers, allow_destroy: true,
     reject_if: proc{|ans| ans["content"].blank?}

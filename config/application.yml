@@ -1,6 +1,10 @@
 defaults: &defaults
   word:
     answers_per_word: 4
+    level:
+      - 1
+      - 2
+      - 3
   all_words: "all_words"
   option:
     - all_words

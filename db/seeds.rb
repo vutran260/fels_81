@@ -29,7 +29,7 @@ categories = Category.order(:created_at).take(5)
 
 categories.each do |category|
   50.times do |_|
-    category.words.create! content: Faker::Lorem.word
+    category.words.create!(content: Faker::Lorem.word, level: rand(1..3))
   end
 end
 

@@ -6,8 +6,10 @@
   <ol type="a">
     <% f.object.word.answers.each do |answer| %>
       <li>
-        <%= f.radio_button :answer_id, answer.id, class: "radio_word" %>
-        <%= answer.content %>
+        <label class="radio radio-answer">
+          <%= f.radio_button :answer_id, answer.id, class: "radio_word" %>
+          <%= answer.content %>
+        </label>
       </li>
     <% end %>
   </ol>

@@ -111,6 +111,10 @@ en:
       learned: "Learned"
       not_learn: "Not learn"
       all_words: "All word"
+    level:
+      _1: "easy"
+      _2: "medium"
+      _3: "hard"
   admin:
     dashboard:
       home:
