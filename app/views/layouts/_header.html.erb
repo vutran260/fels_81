@@ -8,7 +8,6 @@
             admin_root_path if logged_in? && current_user.admin? %>
         </li>
         <li><%= link_to t(".home"), root_path %></li>
-        <li><%= link_to t(".help"), help_path %></li>
         <li><%= link_to t(".all_users"), users_path %></li>
         <li><%= link_to t(".statictics"), statictics_path if logged_in? %></li>
         <% if logged_in? %>

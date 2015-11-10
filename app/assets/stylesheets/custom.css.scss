@@ -351,14 +351,6 @@ input.radio_word, .checkbox_answer {
   width: inherit;
 }
 
-.remove_fields {
-  color: red;
-  cursor:pointer;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 .correct_answer {
   color: green;
   cursor:pointer;
@@ -446,13 +438,13 @@ span.alert_true_answer {
     width: 100px;
     padding: 10px;
     border-radius: 3px;
-    background: #00BF96;
+    background: #44A5BD;
     display: inline-block;
 
     & > span{
       padding: 15px;
       border-radius: 3px;
-      background: #00816A;
+      background: #327C8E;
       display: inline-block;
     }
   }

@@ -117,6 +117,7 @@ en:
       _3: "hard"
   admin:
     dashboard:
+      admin_panel: "Admin panel"
       home:
         title: "Dashboard"
         welcome: "Welcome admin"
