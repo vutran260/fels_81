@@ -2,29 +2,11 @@
   <% case activity.action_type %>
     <% when Settings.activity.follow, Settings.activity.unfollow %>
       <% unless activity.action_object_name(User).nil? %>
-        <%= link_to activity.user.name, activity.user  %>
-        <%= t "activity.#{activity.action_type}" %>
-        <%= link_to activity.action_object_name(User).name, activity
-          .action_object_name(User) %>
-        (<%= time_ago_in_words activity.created_at %> <%= t "ago" %>.)
+        <%= generate_activity activity, :follow %>
       <% end %>
     <% when Settings.activity.learned %>
-      <%= link_to activity.user.name, activity.user  %>
-      <%= t "activity.#{activity.action_type}" %>
-      <%= activity.action_object_name(Lesson).words_correct %>
-      <%= t "words" %> <%= t "in" %>
-      <%= link_to "#{t("lesson")} #{activity.action_object_name(Lesson).id}",
-        activity.action_object_name(Lesson) %>
-      <%= t "from" %> <%= link_to activity.action_object_name(Lesson).category.name,
-        activity.action_object_name(Lesson).category %>
-      (<%= time_ago_in_words activity.created_at %> <%= t "ago" %>.)
+      <%= generate_activity activity, :learned %>
     <% when Settings.activity.learning %>
-      <%= link_to activity.user.name, activity.user  %>
-      <%= t "activity.#{activity.action_type}" %>
-      <%= link_to "#{t("lesson")} #{activity.action_object_name(Lesson).id}",
-        activity.action_object_name(Lesson) %>
-      <%= t "from" %> <%= link_to activity.action_object_name(Lesson).category.name,
-        activity.action_object_name(Lesson).category %>
-      (<%= time_ago_in_words activity.created_at %> <%= t "ago" %>.)
+      <%= generate_activity activity, :learning %>
   <% end %>
 </p>

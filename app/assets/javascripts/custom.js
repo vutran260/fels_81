@@ -18,8 +18,12 @@ $(function(){
         if($(this).parent().find(".word_content").val().trim() == ""){
           flag = false;
         }
+        if($(this).next().next().val() == "1"){
+          flag = false;
+        }
       }
     });
+
     if (!flag) {
       alert($("span.alert_true_answer").text());
     }
