@@ -1,7 +1,8 @@
-$(function(){
-  var total_time_remain = $("#time-remain").data("time-remain");
-  time_remain(total_time_remain);
-});
+var interval;
+function set_time(seconds, minutes){
+  $("#minutes").html(minutes);
+  $("#seconds").html(seconds);
+}
 
 function time_remain(total_in_seconds){
   if (total_in_seconds < 0){
@@ -14,12 +15,18 @@ function time_remain(total_in_seconds){
     minutes = Math.floor(total_in_seconds / 60);
     seconds = total_in_seconds % 60;
     set_time(seconds, minutes);
-    setTimeout(function(){time_remain(total_in_seconds - 1)}, 1000);
   }
   return;
 }
 
-function set_time(seconds, minutes){
-  $("#minutes").html((minutes));
-  $("#seconds").html((seconds));
+var ready_var = function() {
+  total_time_remain = $("#time-remain").data("time-remain");
+  time_remain(total_time_remain);
+  clearInterval(interval);
+  interval = setInterval(function() {
+    time_remain(total_time_remain--)
+  }, 1000);
 }
+
+$(document).ready(ready_var);
+$(document).on("page:load", ready_var);

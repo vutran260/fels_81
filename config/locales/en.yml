@@ -41,6 +41,7 @@ en:
   created: "created "
   in: "in"
   from: "from"
+  words: "words"
   total_answers: "Your total answer:"
   total_correct_answers: "Your correct answer:"
   percent_correct_answer: "(with %{number}% correct)"

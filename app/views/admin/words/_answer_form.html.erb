@@ -6,7 +6,7 @@
     <%= f.text_field :content, class: "form-control word_content" %>
     <%= f.check_box :correct, class: "checkbox_answer" %>
     <%= f.label :correct, t("admin.word.correct"), class: "correct_answer" %>
-    <%= f.hidden_field :_destroy %>
+    <%= f.hidden_field :_destroy, class: "hidden_destroy_field" %>
     <%= f.label t("admin.word.btn_remove"),
       class: "remove_fields btn btn-danger btn-xs" %>
   </div>
